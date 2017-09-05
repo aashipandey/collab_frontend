@@ -1,0 +1,31 @@
+<div>
+
+Search : <input ng-model="search">
+
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Title</th><th>Posted On</th>
+</tr>
+</thead>
+<tbody>
+<tr ng-repeat="job in jobs  | filter:search">
+<td><a href="" ng-click="getJobDetails(job.id)">{{job.jobTitle}}</a></td>
+<td>{{job.postedOn | date : 'yyyy-MM-dd'}}</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div ng-show="showJobDetails">
+<b>Job Title : </b>{{job.jobTitle}} <br>
+<b>Job Description : </b>{{job.jobDescription}} <br>
+<b>Skills Required : </b>{{job.skillRequired}} <br>
+<b>Years Of Experience : </b>{{job.yrsOfExp}} <br>
+<b>Salary : </b>{{job.salary}} <br>
+<b>Location : </b>{{job.location}} <br>
+<b>Company Name : </b>{{job.companyname}} <br>
+<b>Posted On : </b>{{job.postedOn | date:'yyyy:MM:dd'}} <br>
+
+
+</div>
