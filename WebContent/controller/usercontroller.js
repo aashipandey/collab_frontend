@@ -26,7 +26,7 @@ app.controller('UserController',function(UserService,$scope,$rootScope,$location
 		})
 	}
 	
-	$scope.validateUser=function(){
+$scope.validateUser=function(){
 		
 		
 		UserService.validateUser($scope.user).then(function(response){
@@ -64,6 +64,7 @@ app.controller('UserController',function(UserService,$scope,$rootScope,$location
 			$location.path('/editprofile')
 		})
 	}
+	
 	
 })
 

@@ -22,7 +22,7 @@ app.factory('UserService',function($http){
 	}
 	
 	
-	userService.getUser=function(user){
+	userService.updateUser=function(user){
 		return $http.put(BASE_URL+"/updateuser",user)
 	}
 	 

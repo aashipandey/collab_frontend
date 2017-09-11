@@ -47,7 +47,7 @@ app.config(function($routeProvider){
 	})
 	
 	.when('/getblogpostbyid/:id',{
-		templateUrl:'views/blogpostdetail.html',
+		templateUrl:'views/blogpostdetails.html',
 		controller:'BlogPostDetailController'
 	})
 	
@@ -55,9 +55,29 @@ app.config(function($routeProvider){
 		templateUrl:'views/blogpostapprovalform.html',
 		controller:'BlogPostDetailController'
 	})
-	
+		
 	.when('/uploadprofilepic',{
 		templateUrl:'views/profilepicture.html'
+	})
+	
+	.when('/suggesteduserslist',{
+		templateUrl:'views/listofsuggestedusers.html',
+		controller:'FriendController'
+	})
+	
+	.when('/pendingrequests',{
+		templateUrl:'views/listofpendingrequests.html',
+		controller:'FriendController'
+	})
+	
+	.when('/getUserDetails/:fromId',{
+		templateUrl:'views/userdetails.html',
+		controller:'FriendDetailController'
+	})
+	
+	.when('/listoffriends',{
+		templateUrl:'views/listoffriends.html',
+		controller:'FriendController'
 	})
 	
 	.otherwise({

@@ -27,8 +27,8 @@ app.factory('BlogPostService',function($http){
 	blogPostService.updateBlogPost=function(blogPost){
 		return $http.put("http://localhost:8080/collab_backend/updateblogpost",blogPost)
 	}
-	blogPostService.addComment=function(blogPost){
-		console.log(blogComment)
+	blogPostService.addComment=function(blogComment){
+	/*	console.log(blogComment)*/
 		return $http.post("http://localhost:8080/collab_backend/addblogcomment",blogComment)
 	}
 	blogPostService.getBlogComments=function(blogPostId){
