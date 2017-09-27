@@ -1,0 +1,33 @@
+<style>
+body {
+	/* background-color: SaddleBrown; */
+	background-image: url("resources/bg2.jpg");
+}
+</style>
+
+<body>
+<center>
+	<form>
+		<font color="black" size="4px"> Enter username </font>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		<input type="text" ng-model="user.username" disabled><Br><br>
+		<font color="black" size="4px">Enter password </font>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		<input type="password" ng-model="user.password"><br><br>
+		<font color="black" size="4px">Enter firstname</font>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		<input type="text" ng-model="user.firstname"><br><br>
+		<font color="black" size="4px">Enter lastname </font>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		<input type="text" ng-model="user.lastname"><br><br>
+		<font color="black" size="4px">Enter Email </font>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		<input type="email" ng-model="user.email"><br><br>
+		<font color="black" size="4px">Enter phonenumber </font>&nbsp&nbsp&nbsp&nbsp
+		<input type="text" ng-model="user.phonenumber"><br><br>
+		<font color="black" size="4px">Select Role<br><br> 
+		<input type="radio" value="STUDENT"
+			ng-model="user.role">Student <br><br> <input type="radio"
+			value="ALUMINI" ng-model="user.role">Alumini<br><br> <input
+			type="radio" value="EMPLOYEE" ng-model="user.role">Employee<br><br>
+
+		<input type="submit" ng-click="updateUser()" style="background-color:BurlyWood;">
+			</font>
+	</form>
+	</center>
+</body>

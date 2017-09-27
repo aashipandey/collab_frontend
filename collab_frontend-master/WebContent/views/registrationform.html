@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700" rel="stylesheet">
+</head>
+<style>
+body {
+	/* background-color: SaddleBrown; */
+	background-image: url("resources/bann.jpg");
+}
+</style>
+
+<body>
+	<br>
+	<span style="color: BurlyWood; size: 4px;"><center> {{error.message}}</center> </span>
+	<br>
+	<div class="form-group"><center>
+		<font color="BurlyWood" size="4px"> Enter username </font>
+		<br> <input	type="text" ng-model="user.username" 
+			style="width:250px;height:35px;" placeholder="Username" required><Br></center>
+	</div>
+	<br>
+	<div class="form-group"><center>
+		<font color="BurlyWood" size="4px"> Enter password </font>
+		<br> <input	type="password" ng-model="user.password" 
+			style="width:250px;height:35px;" placeholder="Password" required><br></center>
+	</div>
+	<br>
+	<div class="form-group"><center>
+		<font color="BurlyWood" size="4px"> Enter firstname </font><br>
+		 <input	type="text" ng-model="user.firstname" 
+			style="width:250px;height:35px;" placeholder="Firstname" required><br></center>
+	</div>
+	<br>
+	<div class="form-group"><center>
+		<font color="BurlyWood" size="4px"> Enter lastname </font><br>
+		 <input	type="text" ng-model="user.lastname" 
+			style="width:250px;height:35px;" placeholder="Lastname" required><br></center>
+	</div>
+	<br>
+	<div class="form-group"><center>
+		<font color="BurlyWood" size="4px"> Enter Email </font><br> 		
+		<input type="email" ng-model="user.email" 
+			style="width:250px;height:35px;" placeholder="Email" required><br> </center>
+	</div>
+	<br>
+	<div class="form-group"><center>
+			<font color="BurlyWood" size="4px">Enter phone number </font><br> 
+			 <input	type="text" ng-model="user.phonenumber" 
+				style="width:250px;height:35px;" placeholder="Contact no." required><br></center>
+	</div>
+	<br>
+	<div class="form-group"><center>
+			<font color="BurlyWood" size="4px">Select Role<br><br> </font> <input
+				type="radio" value="STUDENT" ng-model="user.role" required>
+				<font color="BurlyWood" size="4px">Student</font> <br>
+			<input type="radio" value="ALUMINI" ng-model="user.role" required>
+			<font color="BurlyWood" size="4px">Alumini
+			</font><br>
+			<input type="radio" value="EMPLOYEE" ng-model="user.role" required>
+			<font color="BurlyWood" size="4px">Employee
+			</font><br>
+			<br> 
+			<input type="submit" ng-click="registerUser()" style="background-color:BurlyWood;" required="">
+				</center>
+	</div>
+</body>
