@@ -1,0 +1,28 @@
+<style>
+body {
+	/* background-color: SaddleBrown; */
+	background-image: url("resources/blog.jpg");
+}
+</style>
+<body>
+<center>
+<div class="container">
+<form>
+<div class="form-group"><font color="#7EBEBD" size="4px">
+Enter Blog Title </font>
+<br><br><input type="text" ng-model="blogPost.blogTitle" class="form-inline" style="width:250px;height:35px;" placeholder="BlogTitle">
+</div>
+<br>
+<div class="form-group"><font color="#7EBEBD" size="4px">
+Enter Description </font>
+<br><br><textarea rows="4" cols="15" ng-model="blogPost.description" class="form-inline" style="width:450px;height:200px;" placeholder="Enter Description">
+</textarea>
+</div>
+
+<br>
+<input type="submit" ng-click="addBlogPost()" value="Add Blog Post" class="btn btn-info">
+
+</form>
+</div>
+</center>
+</body>

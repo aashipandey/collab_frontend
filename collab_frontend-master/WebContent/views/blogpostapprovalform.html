@@ -1,0 +1,29 @@
+<style>
+body {
+	/* background-color: SaddleBrown; */
+	background-image: url("resources/blog.jpg");
+}
+</style>
+<body>
+<center>
+<div class="row">
+
+<div>
+<div class="panel-heading">
+<div><font color="lightpink" size="5px"><b>{{blogPost.blogTitle}}</b></font></div><br>
+<span><strong><font color="white" size="4px"><b>Created By:</b></font></strong><font color="white" size="4px">{{blogPost.postedBy.username}}</font></span><br>
+<span><strong><font color="white" size="4px"><b>on:</b></font></strong><font color="white" size="4px">{{blogPost.postedOn | date:'medium'}}</font></span>
+</div>
+<div class="panel-body">
+<font color="lightpink" size="5px"><b>{{blogPost.description}}</b></font>
+</div>
+</div>
+</div>
+</div>
+
+<form>
+<input type="radio" ng-model="blogPost.approved" value="true"><font color="white">Approve</font><br><br>
+<input type="radio" ng-model="blogPost.approved" value="false"><font color="white">Reject</font><br><br>
+<input type="submit" ng-click="updateBlogPost()" class="btn btn-default" style="background-color:lightpink">
+</center>
+</body>

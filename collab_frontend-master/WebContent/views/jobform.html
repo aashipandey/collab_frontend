@@ -1,0 +1,48 @@
+<style>
+body {
+	/* background-color: SaddleBrown; */
+	background-image: url("resources/getalljobs.jpg");
+}
+</style>
+
+<body>
+<center>
+<div class="container">
+<span style="color:red">{{error.message}}</span>
+<form>
+
+<div class="form-group" ><b><font color="#424949" size="4px">
+Enter job title : </b></font><br><input type="text" ng-model="job.jobTitle" class="form-inline" style="width:350px;height:35px;" placeholder="Job Title">
+</div>
+
+<div class="form-group" ><b><font color="#424949" size="4px">
+Enter job description : </b></font><br><textarea rows="4" cols="15" ng-model="job.jobDescription" class="form-inline" style="width:350px;height:200px;" placeholder="Job Description">
+</textarea></div>
+
+<div class="form-group" ><b><font color="#424949" size="4px">
+Enter skills Required : </b></font><br><input type="text" ng-model="job.skillRequired" class="form-inline" style="width:350px;height:35px;" placeholder="Skills Required">
+</div>
+
+<div class="form-group" ><b><font color="#424949" size="4px">
+Enter years of experience : </b></font><br><input type="text" ng-model="job.yrsOfExp" class="form-inline" style="width:350px;height:35px;" placeholder="Years Of Experience">
+</div>
+
+<div class="form-group" ><b><font color="#424949" size="4px">
+Enter salary : </b></font><br><input type="text" ng-model="job.salary" class="form-inline" style="width:350px;height:35px;" placeholder="Salary">
+</div>
+
+<div class="form-group"><b><font color="#424949" size="4px">
+Enter Location : </b></font><br><input type="text" ng-model="job.location" class="form-inline" style="width:350px;height:35px;" placeholder="Job Location">
+</div>
+
+<div class="form-group" ><b><font color="#424949" size="4px">
+Enter company name : </b></font><br><input type="text" ng-model="job.companyname" class="form-inline" style="width:350px;height:35px;" placeholder="Company Name">
+</div>
+
+<div class="form-group">
+<input type="submit" ng-click="saveJob()" class="btn btn-default" style="background-color:#FADBD8; color:black; width:90px; height:30px;" size="4px">
+</div>
+</form>
+</div>
+</center>
+</body>

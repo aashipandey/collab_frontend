@@ -1,0 +1,32 @@
+<style>
+body {
+	/* background-color: SaddleBrown; */
+	background-image: url("resources/friends.jpg");
+}
+</style>
+
+<body>
+<table style="width:100%">
+<thead>
+<tr>
+<th><b><font color="black" size="5px">From</font></b></th>
+<th><b><font color="black" size="5px">Profile Pic</font></b></th>
+<th><b><font color="black" size="5px">Accept</font></b></th>
+<th><b><font color="black" size="5px">Deny</font></b></th>
+</tr>
+</thead>
+
+<tbody>
+<tr ng-repeat="pendingRequest in pendingrequests">
+<td><a href="#/getUserDetails/{{pendingRequest.fromId}}"><font color="black" size="4px">{{pendingRequest.fromId}}</font></a></td>
+<td><img src="http://localhost:8007/collab_backend/getimage/{{pendingRequest.fromId}}" 
+height="50px" width="50px"></td>
+<td><a href="" ng-click="updatePendingRequest(pendingRequest,'A')"
+ class="btn btn-default" style="background-color:#F2D7D5;">Accept</a></td>
+<td><a href="" ng-click="updatePendingRequest(pendingRequest,'D')" 
+ class="btn btn-default" style="background-color:#F2D7D5;">Deny</a></td>
+</tr>
+</tbody>
+
+</table>
+</body>

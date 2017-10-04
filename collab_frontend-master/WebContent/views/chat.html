@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <title>Chat</title>
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <style>
+body {
+	/* background-color: SaddleBrown; */
+	background-image: url("resources/chat.jpg");
+}
+</style>
+
+
+  <body>
+	<center>
+    <header class="container">
+      <div id="heading" class="masthead">
+        
+        <h2>Chat <small>Online Chat Room</small></h2>
+       
+      </div>
+   </header>
+   
+   <section >
+     <div class="row">
+    	<div class="col-md-12">
+	   		<p class="lead"><b>Type in the box below to start a chat!</b></p>
+	   		
+	   	</div> 
+     
+     </div>
+   	
+   	
+   	<div class="row">
+   		<div class="col-md-12">
+   		
+   			<form role="form" id="chatForm" ng-submit="sendMessage(chat)">
+          <div class="alert alert-info notification" id="joinedChat" ng-if="latestUser" ng-animate="{enter: 'fade', leave: 'fade'}">
+            {{latestUser}} has joined the chat!
+          </div>
+  			  <div class="form-group">
+  			    <label for="to"><font color="black" size="4px">Send To</label><br>
+  			    <select class="form-inline" id="to" name="to" ng-model="chat.to" style="width:250px;height:35px;">
+  			    	<option value="">Select Recipient</option>
+              <option value="all">All Users</option>
+  			    	<option ng-repeat="user in users" value="{{user}}" ng-hide="currentUser.username==user">{{capitalize(user)}}</option>
+  			    </select>
+  			  </div><br>
+  			  <div class="form-group">
+  			    <label for="message"><font color="black" size="4px">Message {{currentUser.username}}</font></label><br>
+  			    <textarea class="form-inline focus-on-click" name="message" placeholder="Message..." rows="3" ng-model="chat.message" style="width:400px;height:300px;"></textarea>
+  			  </div>
+  			  <input type="submit" ng-focus="focus-on-click" name="send" class="btn btn-success" value="Send.." />
+   			</form>
+   		
+   		</div>
+   	
+   	</div>
+   	
+   	<div class="row">
+   		<div class="col-md-12" id="chats" >
+   			<div ng-repeat="chat in chats | reverse" class="chat {{chat.direction}}" ng-class="{'broadcast': chat.broadcast}">
+          		<span class="from">
+		        	{{chat.from}}
+		       		<small ng-if="chat.broadcast">BROADCAST</small>
+		        </span>
+		        <span class="message">{{chat.message}}</span>
+		    </div>
+   		</div>
+   		
+   	
+   	</div>
+   	
+ 
+   
+   </section>
+     
+    <script src="js/sockjs/sockjs.js"></script>
+    <script src="js/stomp/dist/stomp.js"></script>
+<script type="text/javascript" src="controller/chatcontroller.js"></script>
+<script type="text/javascript" src="service/chatservice.js"></script>
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+	<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" 
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-cookies.js"></script>
+    <link href="assets/common/portfolio.css" rel="stylesheet">
+    </center>
+    </body>
+</html>
