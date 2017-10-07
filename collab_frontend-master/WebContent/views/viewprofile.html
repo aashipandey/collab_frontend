@@ -1,0 +1,35 @@
+
+<style>
+body {
+	/* background-color: SaddleBrown; */
+	background-image: url("resources/editpro.jpg");
+	
+}
+</style>
+
+<body>
+<center><br><br>
+	<div>
+	 <img src="http://localhost:8007/collab_backend/getimage/{{currentUser.username}}" style="height:70px;width:70px;">
+	</div>
+<br><br>
+<div>
+<font size="4px">
+<label><b><font color="Honeydew">Username : </font></b>
+	<b><font color="Bisque">{{user.username}}</font></b></label> <br><br>
+<label><b><font color="Honeydew">Firstname : </font></b>
+	<b><font color="Bisque">{{user.firstname}}</font></b> </label><br><br>
+<label><b><font color="Honeydew">&nbsp Lastname  &nbsp: </font></b>
+	<b><font color="Bisque">{{user.lastname}} </font></b></label><br><br>
+<label><b><font color="Honeydew">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Email &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp: </font></b>
+	<b><font color="Bisque">{{user.email}} </font></b></label><br><br>
+<label><b><font color="Honeydew"> Phone Number  &nbsp: </font></b>
+	<b><font color="Bisque">{{user.phonenumber}}</font></b> </label><br><br>
+<label><b><font color="Honeydew">&nbsp Role &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp: </font></b>
+	<b><font color="Bisque">{{user.role}} </font></b></label><br><br>
+</font>
+
+</div>
+	
+	</center>
+</body>

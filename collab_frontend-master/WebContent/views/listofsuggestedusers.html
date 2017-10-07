@@ -1,0 +1,36 @@
+<style>
+body {
+	/* background-color: SaddleBrown; */
+	background-image: url("resources/friends.jpg");
+}
+</style>
+
+<body>
+
+<table  style="width:100%">
+<thead><center>
+<tr>
+<th ><b><font color="black" size="5px">Firstname</font></b></th>
+<th><b><font color="black" size="5px">Lastname</font></b></th>
+<th><b><font color="black" size="5px">Online</font></b></th>
+<th><b><font color="black" size="5px">Role</font></b></th>
+<th><b><font color="black" size="5px">Request</font></b></th><br><br>
+</tr>
+</center>
+</thead>
+
+<tbody><center>
+
+<tr ng-repeat="user in suggestedUsers">
+<td><font color="black" size="4px">{{user.firstname}}</font></td>
+<td><font color="black" size="4px">{{user.lastname}}</font></td>
+<td ng-if="user.online"><font color="black" size="4px">Yes</font></td>
+<td ng-if="!user.online"><font color="black" size="4px">No</font></td>
+<td><font color="black" size="4px">{{user.role}}</font></td>
+<td><a ng-click="friendRequest(user.username)" style="background-color:#F2D7D5;" class="btn btn-default">Send Friend Request</a></td>
+</tr></center>
+</tbody>
+
+</table>
+
+</body>

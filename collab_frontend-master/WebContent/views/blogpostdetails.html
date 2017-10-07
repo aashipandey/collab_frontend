@@ -1,0 +1,44 @@
+<style>
+body {
+	/* background-color: SaddleBrown; */
+	background-image: url("resources/blog.jpg");
+}
+</style>
+<body>
+<center>
+<div class="row">
+<div>
+<div>
+<div class="panel-heading">
+<div><font color="#52A3EC  " size="4px"><b>{{blogPost.blogTitle}}</b></font></div>
+<br><br>
+<span><font color="White">
+<strong>Created By:</strong>{{blogPost.postedBy.username}}<br></font>
+</span>
+<span><font color="White">
+<strong>on:</strong>{{blogPost.postedOn | date:'medium'}}</font>
+</span>
+</div>
+	<div class="panel-body">
+		<font color="#52A3EC" size="4px"><b>{{blogPost.description}}</b></font>
+	</div>
+</div>
+</div>
+</div>
+<br>
+<form>
+{{error.message}}
+<textarea rows="4" cols="15" ng-model="blogComment.commentText" style="width:450px;height:200px;" placeholder="Enter Your Comments"> </textarea>
+<br><br>
+<input type="submit" ng-click="addComment()" class="btn btn-info"><br><br>
+</form>
+<a ng-click="getComments()"><font size="4px"><b>Show Comments</a><br>
+<ul ng-show="showcomments">
+<li ng-repeat="blogComment in blogComments" style="list-style : none">
+<span><font color="White">{{blogComment.commentText}}</font></span>
+<span><strong><font color="White">Commented By &nbsp&nbsp</font></strong><font color="White">{{blogComment.commentedBy.username}}</font></span>
+<span><strong><font color="White">Commented On &nbsp&nbsp</font></strong><font color="White">{{blogComment.commentedOn | date : 'MM/dd/yyyy'}}</font></span>
+</li>
+</ul>
+</center>
+</body>
